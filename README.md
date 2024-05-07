@@ -1,4 +1,4 @@
-#DevOps Projects
+# DevOps Projects
 
 Welcome to the DevOps Projects Repository, your go-to resource for streamlining the intersection of software development and operations. This repository is a curated collection of projects, tools, and best practices aimed at enhancing collaboration, automating processes, and improving the efficiency of your software development lifecycle.
 
