@@ -1,2 +1,2 @@
-FROM apache/latest
+FROM apache:latest
 ADD index.html /var/www/html  
