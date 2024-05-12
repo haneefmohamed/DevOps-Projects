@@ -1,17 +1,32 @@
 pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-  }
-  stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
+    agent any
+    
+    environment {
+        APACHE_CONTAINER_NAME = 'my-apache-container'
+        APACHE_IMAGE_NAME = 'httpd:alpine'
     }
-  }
-  post {
-    always {
-      sh 'sleep infinity'
+    
+    stages {
+        stage('Run Apache Server') {
+            steps {
+                script {
+                    // Run Docker container with Apache server
+                    sh '''
+                        docker run -d -p 80:81 --name $APACHE_CONTAINER_NAME $APACHE_IMAGE_NAME
+                    '''
+                }
+            }
+        }
     }
-  }
+    
+    post {
+        always {
+            // Clean up: Stop and remove the Docker container
+            script {
+                sh '''
+                    docker stop $APACHE_CONTAINER_NAME
+                '''
+            }
+        }
+    }
 }
