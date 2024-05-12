@@ -15,15 +15,4 @@ pipeline {
             }
         }
     }
-    
-    post {
-        always {
-            // Clean up: Stop and remove the Docker container
-            script {
-                sh '''
-                    sudo docker stop my-apache-container
-                '''
-            }
-        }
-    }
 }
