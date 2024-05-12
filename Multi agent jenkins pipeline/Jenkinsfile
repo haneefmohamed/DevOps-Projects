@@ -11,7 +11,8 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'node:16-alpine' }
+        docker { image 'node:16-alpine' 
+               reuseNode true }
       }
       steps {
         sh 'node --version'
