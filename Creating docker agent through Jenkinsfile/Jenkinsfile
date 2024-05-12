@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'docker:latest' }
+        docker { image 'httpd:latest' }
     }
     
     stages {
@@ -9,9 +9,20 @@ pipeline {
                 script {
                     // Run Docker container with Apache server
                     sh '''
-                        docker run -d -p 80:81 --name my-apache-container httpd:alpine
+                       sudo docker run -d -p 80:81 --name my-apache-container httpd:latest
                     '''
                 }
+            }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up: Stop and remove the Docker container
+            script {
+                sh '''
+                    sudo docker stop my-apache-container
+                '''
             }
         }
     }
