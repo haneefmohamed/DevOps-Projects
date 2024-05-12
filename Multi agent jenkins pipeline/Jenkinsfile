@@ -1,3 +1,4 @@
+
 pipeline {
   agent none
   stages {
@@ -15,14 +16,8 @@ pipeline {
       }
       steps {
         sh 'node --version'
+        sh 'docker ps -a'
       }
     }
-    stage('View Docker Containers') {
-            steps {
-                script {
-                    // View Docker containers using docker ps -a command
-                    sh 'docker ps -a'
   }
 }
-    }
-  }
