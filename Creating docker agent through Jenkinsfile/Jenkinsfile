@@ -1,18 +1,12 @@
 pipeline {
-    agent {
-        docker { image 'httpd:latest' }
+  agent {
+    docker { image 'node:16-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
+      }
     }
-    
-    stages {
-        stage('Run Apache Server') {
-            steps {
-                script {
-                    // Run Docker container with Apache server 
-                      sh '''
-                           docker run -d -p 80:81 --name my-apache-container httpd:latest
-                         '''  
-                }
-            }
-        }
-    }
+  }
 }
