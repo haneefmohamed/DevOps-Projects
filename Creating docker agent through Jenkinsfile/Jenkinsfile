@@ -1,12 +1,17 @@
 pipeline {
   agent {
-    docker { image 'nginx:1.26.0-alpine' }
+    docker { image 'node:16-alpine' }
   }
   stages {
     stage('Test') {
       steps {
-        sh 'nginx --version'
+        sh 'node --version'
       }
     }
   }
+  post {
+    always {
+      sh 'sleep infinity'
+    }
   }
+}
