@@ -8,7 +8,7 @@
 
 # Install Jenkins.
 
-Pre-Requisites:
+Pre-Requisites
 Java (JDK)
 
 # Run the below commands to install Java and Jenkins
