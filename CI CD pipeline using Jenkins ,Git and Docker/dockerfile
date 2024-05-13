@@ -1,2 +1,0 @@
-FROM apache:latest
-ADD index.html /var/www/html  
