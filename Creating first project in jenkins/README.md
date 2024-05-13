@@ -15,13 +15,19 @@ A typical style jenkins jobs has the following sections.
 
 ![image](https://github.com/haneefmohamed/DevOps-Projects/assets/159698808/5b4931ae-d324-48ee-a897-c150f6c621fa)
 
-Name/description
-Advanced Option
-Source Code Management
-Build Triggers
-Pre Build
-Build
-Post Build
+-Name/description
+
+-Advanced Option
+
+-Source Code Management
+
+-Build Triggers
+
+-Pre Build
+
+-Build
+
+-Post Build
 
 # Creating a Simple Job
 Lets now create a simple job using jenkins to run a hello world program.
