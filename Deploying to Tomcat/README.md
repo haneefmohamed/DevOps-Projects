@@ -3,7 +3,7 @@ We have setup the jobs which compile code and then run unit tests, static code a
 
 ## Preparing Tomcat for Deployment
 ### Running Tomcat as a Docker Container
-We assume that docker image for Tomcat is being pulled from https://hub.docker.com/_/tomcat/.
+We assume that docker image for Tomcat is being pulled from ^dockerhub.com^
 
 To deploy to tomcat, we first need to create user configurations to enable tomcat admin UI.
 
