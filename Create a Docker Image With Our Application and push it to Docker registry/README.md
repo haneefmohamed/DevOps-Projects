@@ -109,8 +109,11 @@ This job has one Build step.
 
 Select Docker Build and Publish from the Build step
 
+![image](https://github.com/haneefmohamed/DevOps-Projects/assets/159698808/6d7a8cc3-1bfe-40df-a43e-cb6f698d589c)
+
 Add the following details in the fields.
 
+![image](https://github.com/haneefmohamed/DevOps-Projects/assets/159698808/58807355-c5df-4a52-b236-d806e5cd44e5)
 
 Then click on Save.
 
