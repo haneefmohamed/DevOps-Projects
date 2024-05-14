@@ -7,10 +7,13 @@ From project page, click on Configure.
 
 ## Types of Triggers
 
-Trigger builds remotely
-Build after other projects are built
-Build periodically
-Poll SCM
+1.Trigger builds remotely
+
+2.Build after other projects are built
+
+3.Build periodically
+
+4.Poll SCM
 
 ## Execute Jobs Remotely
 
